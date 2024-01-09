@@ -1,0 +1,1051 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../assets/">
+      
+      
+        <link rel="next" href="../common/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>채팅 (Chat) - Fireship</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chat" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Fireship" class="md-header__button md-logo" aria-label="Fireship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fireship
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              채팅 (Chat)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fireship" class="md-nav__button md-logo" aria-label="Fireship" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Fireship
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fireship
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    관리자
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    채팅 (Chat)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    채팅 (Chat)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      디자인 컨셉 (Design Concept)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅 데이터베이스 (Chat Database)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      로직 (Logic)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="로직 (Logic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-chatroommodel-on-chatroom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get ChatRoomModel on ChatRoom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 생성 (Creating Chat Room)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Chat Room
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 수정 (Updating Chat Room)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-chat-room-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 메시지 전송 (Sending Chat Room Messages)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-chat-messages-in-a-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Chat Messages in a Room
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-room-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 목록 (Chat Room List)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#management" class="md-nav__link">
+    <span class="md-ellipsis">
+      관리 (Management)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="관리 (Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-chat-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      오픈 챗 목록 (Open Chat List)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-open-chat-message-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      오픈 챗 메시지 데이터 삭제 (Delete Open Chat Message Data)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    공통
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Messaging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../translation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    사용자
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      디자인 컨셉 (Design Concept)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅 데이터베이스 (Chat Database)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      로직 (Logic)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="로직 (Logic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-chatroommodel-on-chatroom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get ChatRoomModel on ChatRoom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 생성 (Creating Chat Room)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Chat Room
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-chat-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 수정 (Updating Chat Room)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-chat-room-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 메시지 전송 (Sending Chat Room Messages)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-chat-messages-in-a-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Chat Messages in a Room
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-room-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      채팅방 목록 (Chat Room List)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#management" class="md-nav__link">
+    <span class="md-ellipsis">
+      관리 (Management)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="관리 (Management)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-chat-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      오픈 챗 목록 (Open Chat List)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-open-chat-message-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      오픈 챗 메시지 데이터 삭제 (Delete Open Chat Message Data)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chat">채팅 (Chat)</h1>
+<h2 id="design-concept">디자인 컨셉 (Design Concept)</h2>
+<ul>
+<li>동시에 여러개의 채팅방을 열 수 있다 (You can open multiple chat rooms simultaneously).</li>
+</ul>
+<h2 id="chat-database">채팅 데이터베이스 (Chat Database)</h2>
+<ul>
+<li><code>/chat-rooms</code> 에는 채팅방 정보를 저장한다 (stores information about chat rooms).</li>
+<li><code>/chat-messages</code> 에는 채팅 메시지가 저장된다 (stores chat messages).</li>
+<li>
+<p><code>/chat-joins</code> 에는 누가 어떤 채팅방에 참여하고 있는지 관계를 나타낸다. <code>/chat-rooms</code> 와 <code>/chat-joins</code> 의 DB 구조가 매우 비슷하여 둘다 모두 <code>ChatRoomModel</code> 을 사용한다.</p>
+</li>
+<li>
+<p><code>noOfUsers</code> 는 그룹 채팅방에 새로운 사용자가 join 또는 leave 할 때, <code>/chat-rooms</code> 에 업데이트되고,</p>
+</li>
+<li>
+<p>메시지를 전송 할 때 <code>/chat-joins</code> 에 업데이트된다.</p>
+</li>
+<li>
+<p>채팅 메시지를 전송 할 때, text 에 URL 이 들어가 있으면, url preview 할 수 있는 정보를 추출하여, 해당 메시지의 아래의 필드들에 적절한 값을 저장한다.</p>
+</li>
+<li><code>previewUrl</code> - 해당 URL</li>
+<li><code>previewTitle</code> - 제목</li>
+<li><code>previewDescription</code> - 내용</li>
+<li><code>previewImageUrl</code> - 사진</li>
+</ul>
+<h2 id="logic">로직 (Logic)</h2>
+<h3 id="get-chatroommodel-on-chatroom">Get ChatRoomModel on ChatRoom</h3>
+<ul>
+<li>The complete chat room model instance is needed before display the chat room message. For instance,</li>
+<li>to check if the user is in the room,</li>
+<li>to check if site preview displaying or image displaying options,</li>
+<li>to show password input box based on the chat room settings,</li>
+<li>etc</li>
+</ul>
+<h3 id="order">order</h3>
+<ul>
+<li>Chat message order is sorted by the last message's <code>order</code> field.</li>
+<li>It must have a smaller value than the previous message.</li>
+<li>When you send a chat message programatically without <code>order</code>, the message may be shown at the top.</li>
+</ul>
+<h3 id="creating-chat-room">채팅방 생성 (Creating Chat Room)</h3>
+<p>간단하게 채팅방을 생성하는 방법은 아래와 같다.</p>
+<pre><code class="language-dart">ChatModel chat = ChatModel(room: ChatRoomModel.fromRoomdId('all'))..join();
+ChatMessageListView(chat: chat);
+</code></pre>
+<p>ChatModel 만드는 것 만으로 채팅방이 만들어지지 않는다. 그래서 join() 을 추가적으로 호출한다.</p>
+<p><code>join()</code> 을 호출하면, <code>/chat-rooms/all/users</code> 에 <code>{[uid]: true}</code> 가 생성된다.</p>
+<p>그리고 <code>ChatMessageListView</code> 위젯을 화면에 표시하면, 내부적으로 <code>ChatMessageListView::initState() -&gt; ChatModel::resetNewMessage()</code> 에서 RTDB <code>chat-joins/all</code> 에 <code>{order: 0}</code> 을 저장한다.</p>
+<p>그러나, 미리 만들어져 있는 <code>ChatService.instance.showChatRoomCreate()</code> 함수를 사용하면 보다 쉽게 채팅방을 생성 할 수 있다. 커스텀 디자인을 하고 싶다면, <code>DefaultChatRoomEditDialog</code> 를 복사해서 수정하면 된다.</p>
+<h3 id="viewing-chat-room">Viewing Chat Room</h3>
+<p>A <code>ChatRoom()</code> widget can be used to show chat room (room's messages with room input box).</p>
+<pre><code class="language-dart">// For 1:1 chat room
+ChatRoom(uid: 'user-uid');
+
+...
+
+// Using room-id for 1:1 or group chat room
+ChatRoom(roomId: 'room-id');
+
+...
+
+// Using snapshot -&gt; ChatRoomModel
+ChatRoomModel chatRoom = ChatRoomModel.fromSnapshot(dataSnapshot);
+ChatRoom(room: chatRoom);
+</code></pre>
+<h3 id="updating-chat-room">채팅방 수정 (Updating Chat Room)</h3>
+<p>채팅방 수정은 <code>ChatService.instance.showChatRoomSettings(roomId: ...)</code> 를 호출하면 되며, 채팅방 생성과 같은 위젯인 <code>DefaultChatRoomEditDialog</code> 를 사용한다.</p>
+<p>채팅방을 수정 할 때에는 추가적으로 인증 회원, 성별을 지정 할 수 있다. <code>gender</code> 에 <code>M</code> 또는 <code>F</code> 의 값이 지정되면, 해당 성별의 회원만 접속(채탕방 입장)이 가능하다. <code>verified</code> 의 경우, 남/녀 상관없이, 인증된 사용자 이면 접속 할 수 있다. 참고로 인증 회원과 성별은 회원 정보를 참고한다.</p>
+<h3 id="sending-chat-room-messages">채팅방 메시지 전송 (Sending Chat Room Messages)</h3>
+<p>To send Chat message into a room, <code>ChatMessageInputBox()</code> can be used as Input box.</p>
+<pre><code class="language-dart">// the ChatRoomModel is required. Get it.
+ChatRoomModel room = ChatRoomModel.fromSnaphot(snapshot);
+
+// the `chat` should be the model of the room
+ChatModel chat = ChatModel(room: room);
+
+ChatMessageInputBox(
+  chat: chat,
+),
+</code></pre>
+<p>However, for more customization, here is the actual code to send a chat message. Edit these as needed.</p>
+<pre><code class="language-dart">// the ChatRoomModel is required. Get it.
+ChatRoomModel room = ChatRoomModel.fromSnaphot(snapshot);
+
+ChatModel chat = ChatModel(room: room);
+
+// This may throw error if user is not logged in.
+chat.sendMessage(text: 'Text Message to send', url: 'photo.url.com');
+
+</code></pre>
+<h3 id="getting-chat-messages-in-a-room">Getting Chat Messages in a Room</h3>
+<p>To display chat messages in a room, <code>ChatMessageListView()</code> can be used.</p>
+<pre><code class="language-dart">// the ChatRoomModel is required. Get it.
+ChatRoomModel room = ChatRoomModel.fromSnaphot(snapshot);
+
+// the `chat` should be the model of the room
+ChatModel chat = ChatModel(room: room);
+
+ChatMessageListView(
+  chat: chat,
+),
+</code></pre>
+<p>For customization, these can be used. Edit them as needed:</p>
+<pre><code class="language-dart">DatabaseReference ref = ChatService.instance.messageRef(roomId: roomId).orderByChild('order');
+
+FirebaseDatabaseQueryBuilder(
+  pageSize: 100,
+  query: ref,
+  builder: (context, snapshot, _) {
+    if (snapshot.isFetching) {
+      return CircularProgressIndicator();
+    }
+    if (snapshot.hasError) {
+      return Text('Something went wrong! ${snapshot.error}');
+    }
+    if (snapshot.docs.isEmpty) {
+      return Center(child: Text('There is no message, yet.'));
+    }
+    // finally return the list
+    return ListView.builder(
+      reverse: true,
+      itemCount: snapshot.docs.length,
+      itemBuilder: (context, index) {
+        if (snapshot.hasMore &amp;&amp; index + 1 == snapshot.docs.length) {
+          snapshot.fetchMore();
+        }
+        final message = ChatMessageModel.fromSnapshot(snapshot.docs[index]);
+
+        /// 채팅방의 맨 마지막 메시지의 order 를 지정.
+        chat.resetRoomMessageOrder(order: message.order);
+
+        return YourCustomChatBubble(
+          message: message,
+        );
+      },
+
+    );
+  },
+);
+
+
+
+</code></pre>
+<h3 id="chat-room-list">채팅방 목록 (Chat Room List)</h3>
+<p>RTDB 의 특성상 채팅방을 목록 할 때,</p>
+<ul>
+<li>나의 1:1 채팅방 목록 중 날짜순</li>
+<li>나의 전체 채팅방 목록 중 날짜순</li>
+<li>오픈챗 목록 중 날짜순
+  등으로 표시하기가 매우 힘들다.</li>
+</ul>
+<p>그래서, isSingleChat: 에 음수의 시간을 지정해서, 나의 1:1 채팅방 목록에서 최근 채팅 채팅 목록으로 표시 할 수 있다.
+이것은 isGroupChat 과 isOpenGroupChat 도 마찬가지이다.</p>
+<p>그래서, 채팅방 목록 전체를 다 가져와서 한번에 표시한다. 즉, 나의 1:1 채팅방 목록을 할 때에는 나의 1:1 채팅방 목록 전체를 다 가져와서 날싸순으로 표시를 하는 것이다. 이것을 나의 전체 그룹 채팅, 그리고 모든 오픈 채팅과 동일하게 표시를 한다.
+다만, 이렇게 하려면 개개인(사용자)의 채팅 방수가 너무 많으면 안된다. 전반적으로 1인당 500개 이하는 무난 할 것 같다. 2천개 이하도 괜찮을 것 같기도 하다. 다만 한 사용자의 방 수가 2천 개 이상 이면 좀 무리가 되지 않을까 싶다. 그래서 방수를 제한하는 것도 하나의 방법이겠다. 또한 오픈 챗의 개수가 2천개 이상 넘어가도 문제가 될 것 같다.</p>
+<p>Here is an example code to show chat room list.</p>
+<pre><code class="language-dart">FirebaseDatabaseQueryBuilder(
+  query: ChatService.instance.joinsRef
+      .child(myUid!)
+      .orderByChild(Field.order)
+      .startAt(false),
+  pageSize: 50,
+  builder: (context, snapshot, _) {
+    if (snapshot.isFetching) {
+      return const Center(child: CircularProgressIndicator());
+    }
+    if (snapshot.hasError) {
+      return Text('Something went wrong! ${snapshot.error}');
+    }
+    if (snapshot.hasMore == false &amp;&amp; snapshot.docs.isEmpty) {
+      return Text('No chat rooms');
+    }
+    return ListView.builder(
+      padding: EdgeInsets.zero,
+      itemCount: snapshot.docs.length,
+      itemBuilder: (context, index) {
+        if (snapshot.hasMore &amp;&amp; index + 1 == snapshot.docs.length) {
+          snapshot.fetchMore();
+        }
+        final room = ChatRoomModel.fromSnapshot(snapshot.docs[index]);
+        return ChatRoomListTile(room: room);
+      },
+    );
+  },
+);
+
+</code></pre>
+<h2 id="management">관리 (Management)</h2>
+<ul>
+<li>기본 관리자 화면을 사용하면 된다. <code>AdminService.instance.showDashboard()</code> 를 호출하면 된다.</li>
+</ul>
+<h3 id="open-chat-list">오픈 챗 목록 (Open Chat List)</h3>
+<h3 id="delete-open-chat-message-data">오픈 챗 메시지 데이터 삭제 (Delete Open Chat Message Data)</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
