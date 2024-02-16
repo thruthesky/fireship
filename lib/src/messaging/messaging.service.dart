@@ -298,6 +298,7 @@ class MessagingService {
     required String title,
     required String body,
     String? image,
+    Map<String, dynamic>? extra,
   }) async {
     if (uid == null && uids == null) return null;
 
@@ -337,6 +338,7 @@ class MessagingService {
       body: body,
       image: image,
       senderUid: myUid!,
+      extra: extra,
     );
 
     dog('sendTo() responses: $responses');

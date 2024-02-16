@@ -96,6 +96,42 @@ class _CommentEditDialogState extends State<CommentEditDialog> {
                         urls: comment.urls,
                         parent: widget.parent,
                       );
+                      // TODO send push notification to post owner
+                      // TODO send push notifications to other commenters
+                      // Should it be here in Fireship
+                      dog("Post uid: ${widget.post?.uid}");
+                      dog("Parent uid: ${widget.parent?.uid}");
+                      dog("Comment uid: ${comment.uid}");
+                      // TODO review and revise
+                      // TODO DRY properly
+                      if (widget.post?.uid != null) {
+                        MessagingService.instance.sendTo(
+                          uid: widget.post!.uid,
+                          title: widget.post!.title,
+                          body:
+                              "${my?.displayName ?? "Someone"} commented on your post. ${comment.content}...",
+                          extra: {
+                            if (widget.post?.id != null)
+                              "postId": widget.post?.id,
+                            if (widget.parent?.id != null)
+                              "parentId": widget.parent?.id,
+                          },
+                        );
+                      }
+                      if (widget.parent?.uid != null) {
+                        MessagingService.instance.sendTo(
+                          uid: widget.parent!.uid,
+                          title: widget.post!.title,
+                          body:
+                              "${my?.displayName ?? "Someone"} replied on your comment. ${comment.content}...",
+                          extra: {
+                            if (widget.post?.id != null)
+                              "postId": widget.post?.id,
+                            if (widget.parent?.id != null)
+                              "parentId": widget.parent?.id,
+                          },
+                        );
+                      }
                     } else {
                       await comment.update(
                         content: contentController.text,

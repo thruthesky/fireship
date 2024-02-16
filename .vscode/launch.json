@@ -235,6 +235,16 @@
       "args": ["-v", "--dart-define", "MODE=test"]
     },
     {
+      "name": "Silvers (Chris) TEST - iPhone sm black (debug)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "00008030-000D445A11A3802E",
+      "flutterMode": "debug",
+      "cwd": "apps/silvers",
+      "program": "lib/main.dart",
+      "args": ["-v", "--dart-define", "MODE=test"]
+    },
+    {
       "name": "Silvers (Chris) TEST - External Sam (debug)",
       "request": "launch",
       "type": "dart",
