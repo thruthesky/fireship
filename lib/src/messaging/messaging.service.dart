@@ -247,6 +247,9 @@ class MessagingService {
         }
       } catch (e) {
         dog('Error on calling firebase function: $e');
+        if (sendUrl == null) {
+          dog("ERROR! Please include send URL upon init in Messaging Service. Need to add the http address of the firebase function. See: https://firebase.google.com/docs/functions/http-events?gen=2nd#invoke_an_http_function");
+        }
 
         ///
       }
