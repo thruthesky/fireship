@@ -46,11 +46,12 @@ class Ref {
   static DatabaseReference postComment(String postId, String commentId) =>
       postComments(postId).child(commentId);
 
+// TODO this will be deleted. Just need to review the other sample code.
   /// Forum category subscriptions - who subscribes to which category
   static DatabaseReference postSubscriptions =
       root.child(Folder.postSubscriptions);
-  static DatabaseReference forumSubscription(String uid, String category) =>
-      postSubscriptions.child(category).child(uid);
+  static DatabaseReference forumSubscription(String category) =>
+      postSubscriptions.child(category);
 
   /// Report
   static DatabaseReference reports = root.child(Folder.reports);

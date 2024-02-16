@@ -98,8 +98,7 @@ class _CommentEditDialogState extends State<CommentEditDialog> {
                       );
                       // TODO send push notification to post owner
                       // TODO send push notifications to other commenters
-                      // Should it be here in Fireship
-                      // or should it be a cloud function
+                      // This should be a cloud function
                       dog("Post uid: ${widget.post?.uid}");
                       dog("Parent uid: ${widget.parent?.uid}");
                       dog("Comment uid: ${comment.uid}");

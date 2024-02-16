@@ -104,15 +104,17 @@ class ForumService {
     );
   }
 
+  /// TODO review other example first before implementhing/finalizing
+  /// TODO delete
   /// Subscribes to a category
   Future<void> subscribe(String category) async {
     /// Path: /posts/{category}/{id}
     /// Add current users uid in Path in RTDB
-    await Ref.forumSubscription(myUid!, category).child(myUid!).set(true);
+    await Ref.forumSubscription(category).set(true);
   }
 
   /// Unsubscribes from a category
   Future<void> unsubscribe(String category) async {
-    await Ref.forumSubscription(myUid!, category).remove();
+    await Ref.forumSubscription(category).remove();
   }
 }
