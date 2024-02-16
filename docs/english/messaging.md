@@ -28,17 +28,13 @@ await MessagingService.instance.sendTo(
 
 To use this method, The firebase cloud function named `sendPushNotifications` in `firebase/functions/src/messaging/functions.ts` must be installed. See installation on how to install firebsae functions.
 
-
 ## Sending messages for forum category subscription and chat room subscription
-
 
 There are firebase cloud functions that work with fireship for sending messages to subscribers on forum categories and chat rooms.
 
 You will need to install `sendMessagesToCategorySubscribers` and `sendMessagesToChatRoomSubscribers` in `firebase/functions/src/messaging/functions.ts` to make it work.
 
 The source code is under `firebase/functions` and the test code is under `firebase/functions/tests`.
-
-
 
 ## Unit testing
 
