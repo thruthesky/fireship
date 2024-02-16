@@ -46,6 +46,12 @@ class Ref {
   static DatabaseReference postComment(String postId, String commentId) =>
       postComments(postId).child(commentId);
 
+  /// Forum category subscriptions - who subscribes to which category
+  static DatabaseReference postSubscriptions =
+      root.child(Folder.postSubscriptions);
+  static DatabaseReference forumSubscription(String uid, String category) =>
+      postSubscriptions.child(category).child(uid);
+
   /// Report
   static DatabaseReference reports = root.child(Folder.reports);
 
