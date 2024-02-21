@@ -79,10 +79,12 @@ class _CommentListViewState extends State<CommentListView> {
     }
 
     return SliverList(
+      key: PageStorageKey("commentListView_${widget.post.id}"),
       delegate: SliverChildBuilderDelegate(
         (context, index) {
           final comment = comments![index];
           return CommentView(
+            key: ValueKey(comment.id),
             post: widget.post,
             comment: comment,
           );

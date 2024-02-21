@@ -1,7 +1,7 @@
 import 'package:fireship/fireship.dart';
 import 'package:flutter/material.dart';
 
-class DisplayDatabasePhotos extends StatelessWidget {
+class DisplayDatabasePhotos extends StatefulWidget {
   const DisplayDatabasePhotos({
     super.key,
     required this.path,
@@ -10,9 +10,14 @@ class DisplayDatabasePhotos extends StatelessWidget {
   final String path;
 
   @override
+  State<DisplayDatabasePhotos> createState() => _DisplayDatabasePhotosState();
+}
+
+class _DisplayDatabasePhotosState extends State<DisplayDatabasePhotos> {
+  @override
   Widget build(BuildContext context) {
     return Value(
-      path: path,
+      path: widget.path,
       builder: (v) {
         return DisplayPhotos(urls: List<String>.from(v ?? []));
       },

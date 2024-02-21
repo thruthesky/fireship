@@ -161,7 +161,10 @@ class _PostViewScreenState extends State<PostViewScreen> {
                 ),
               ),
             ),
-            CommentListView(post: post),
+            CommentListView(
+              key: PageStorageKey("Comm_${post.id}"),
+              post: post,
+            ),
           ],
         ),
       ),

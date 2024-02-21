@@ -244,6 +244,16 @@
       "args": ["-v",]
     },
     {
+      "name": "Silvers (Chris) - External Sam (profile)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "R9ATA00LMJM",
+      "flutterMode": "profile",
+      "cwd": "apps/silvers",
+      "program": "lib/main.dart",
+      "args": ["-v",]
+    },
+    {
       "name": "Silvers (Chris) TEST - iPhone 15 Pro (debug)",
       "request": "launch",
       "type": "dart",

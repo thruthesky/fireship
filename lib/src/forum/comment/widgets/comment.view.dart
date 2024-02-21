@@ -15,10 +15,10 @@ class CommentView extends StatefulWidget {
   final Function? onCreate;
 
   @override
-  State<CommentView> createState() => _CommnetViewState();
+  State<CommentView> createState() => _CommentViewState();
 }
 
-class _CommnetViewState extends State<CommentView> {
+class _CommentViewState extends State<CommentView> {
   int? previousNoOfLikes;
 
   @override
