@@ -64,6 +64,7 @@ class _CommentListViewState extends State<CommentListView> {
   @override
   void dispose() {
     newCommentSubscription?.cancel();
+
     super.dispose();
   }
 

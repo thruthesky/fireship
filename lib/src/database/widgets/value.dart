@@ -1,3 +1,4 @@
+import 'package:fireship/src/utility/cache.service.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_database/firebase_database.dart';
@@ -30,6 +31,7 @@ class Value extends StatelessWidget {
     required this.builder,
     this.initialData,
     this.onLoading,
+    this.cacheKey,
   });
 
   final String path;
@@ -40,11 +42,19 @@ class Value extends StatelessWidget {
   final Widget Function(dynamic value) builder;
   final Widget? onLoading;
 
+  final CacheKey? cacheKey;
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
+      initialData: cacheKey != null
+          ? CacheService.instance.get(cacheKey!) as DatabaseEvent?
+          : null,
       stream: FirebaseDatabase.instance.ref(path).onValue,
       builder: (context, AsyncSnapshot<DatabaseEvent> event) {
+        if (cacheKey != null && CacheService.instance.get(cacheKey!) != null) {
+          print("cached: ${CacheService.instance.toString()}");
+        }
         if (event.connectionState == ConnectionState.waiting) {
           if (event.hasData) {
             return builder(event.data!.snapshot.value);
@@ -56,6 +66,9 @@ class Value extends StatelessWidget {
         if (event.hasError) {
           return Text('Error; path: $path, message: ${event.error}');
         }
+        cacheKey != null
+            ? CacheService.instance.set(cacheKey!, event.data)
+            : null;
         // value may be null.
         return builder(event.data?.snapshot.value);
       },

@@ -1,5 +1,6 @@
 import 'package:fireship/fireship.dart';
 import 'package:fireship/src/forum/comment/widgets/comment.content.dart';
+import 'package:fireship/src/utility/cache.service.dart';
 import 'package:flutter/material.dart';
 
 class CommentView extends StatefulWidget {
@@ -42,6 +43,8 @@ class _CommentViewState extends State<CommentView> {
               CommentContent(comment: widget.comment),
               const SizedBox(height: 8),
               DisplayDatabasePhotos(
+                cacheKey: CacheKey(widget.post.id,
+                    "DisplayDatabasePhotos_${widget.comment.id}"),
                 path:
                     '${Path.comment(widget.post.id, widget.comment.id)}/${Field.urls}',
               ),

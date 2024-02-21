@@ -1,4 +1,5 @@
 import 'package:fireship/fireship.dart';
+import 'package:fireship/src/utility/cache.service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,6 +17,13 @@ class PostViewScreen extends StatefulWidget {
 class _PostViewScreenState extends State<PostViewScreen> {
   PostModel get post => widget.post;
   int? previousNoOfLikes;
+
+  @override
+  void dispose() {
+    super.dispose();
+    CacheService.instance.clearGroup(post.id);
+    print(CacheService.instance.toString());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +170,6 @@ class _PostViewScreenState extends State<PostViewScreen> {
               ),
             ),
             CommentListView(
-              key: PageStorageKey("Comm_${post.id}"),
               post: post,
             ),
           ],
