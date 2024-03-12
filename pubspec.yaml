@@ -1,7 +1,8 @@
 name: fireship
 description: "A lightning-fast, robust CMS for seamless real-time content management in app development."
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/thruthesky/fireship
+replaceBy: fireflutter
 
 environment:
   sdk: ">=3.2.3 <4.0.0"
